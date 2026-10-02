@@ -1,0 +1,218 @@
+:root {
+  --fondo: #f7f5f2;
+  --superficie: #ffffff;
+  --texto: #1f1d1a;
+  --tenue: #6b655c;
+  --borde: #e2ddd5;
+  --acento: #b5562c;
+  --acento-texto: #ffffff;
+  --error: #b42318;
+  --exito: #1f7a3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #161513;
+    --superficie: #201e1b;
+    --texto: #f1ede6;
+    --tenue: #a39d93;
+    --borde: #36322d;
+    --acento: #e07a48;
+    --acento-texto: #161513;
+    --error: #f97066;
+    --exito: #4ade80;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.25rem;
+}
+
+.contenedor {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.marca {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.usuario {
+  color: var(--tenue);
+}
+
+.tenue {
+  color: var(--tenue);
+  margin: 0;
+}
+
+.boton,
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--acento);
+  background: var(--acento);
+  color: var(--acento-texto);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.secundario {
+  background: transparent;
+  color: var(--acento);
+}
+
+button.enlace {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.25rem;
+}
+
+.detalle {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0 0;
+}
+
+.formulario {
+  display: grid;
+  gap: 1rem;
+  max-width: 420px;
+  margin-top: 1.5rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+input,
+select {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+}
+
+.horarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.horarios button {
+  background: transparent;
+  color: var(--texto);
+  border-color: var(--borde);
+}
+
+.horarios button[aria-pressed="true"] {
+  background: var(--acento);
+  color: var(--acento-texto);
+  border-color: var(--acento);
+}
+
+.aviso {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid currentColor;
+  margin: 1rem 0 0;
+}
+
+.aviso-error {
+  color: var(--error);
+}
+
+.aviso-exito {
+  color: var(--exito);
+}
+
+.lista-citas {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.lista-citas li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estado-cancelada {
+  opacity: 0.6;
+}
