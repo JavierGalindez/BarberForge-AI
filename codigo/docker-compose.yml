@@ -1,5 +1,5 @@
 services:
-db:
+  db:
     image: pgvector/pgvector:pg16
     container_name: barberforge-db
     restart: unless-stopped
