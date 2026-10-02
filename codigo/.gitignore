@@ -1,11 +1,6 @@
-.env
 node_modules/
 __pycache__/
 *.pyc
+.env
+dist/
 .venv/
-.next/
-.pytest_cache/
-out/
-*.log
-*.tsbuildinfo
-next-env.d.ts
